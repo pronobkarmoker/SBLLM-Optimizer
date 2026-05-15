@@ -1,0 +1,58 @@
+PS E:\SBLLM-Optimizer\Learnings> python genetic_algorithm_code_optimization.py
+============================================================
+  GENERATING DATASET
+============================================================
+  Samples  : 1000
+  Features : 10
+  Classes  : 2  (Binary Classification)
+  Class 0  : 498  samples
+  Class 1  : 502  samples
+
+============================================================
+  GENETIC ALGORITHM — HYPERPARAMETER OPTIMIZATION
+============================================================
+  Population Size : 30
+  Generations     : 20
+  Mutation Rate   : 0.2
+  Elite Size      : 4
+  Tournament K    : 5
+  Fitness Metric  : 5-Fold CV Accuracy
+
+  Gen   1/20 | Best Acc: 0.9170 | Avg Acc: 0.9032 | Params: lr=0.4333, n_est=204, depth=9
+  Gen   2/20 | Best Acc: 0.9200 | Avg Acc: 0.9106 | Params: lr=0.2133, n_est=204, depth=12
+  Gen   3/20 | Best Acc: 0.9200 | Avg Acc: 0.9135 | Params: lr=0.2133, n_est=204, depth=12
+  Gen   4/20 | Best Acc: 0.9260 | Avg Acc: 0.9148 | Params: lr=0.3649, n_est=204, depth=19
+  Gen   5/20 | Best Acc: 0.9260 | Avg Acc: 0.9152 | Params: lr=0.3649, n_est=204, depth=19
+  Gen   6/20 | Best Acc: 0.9260 | Avg Acc: 0.9157 | Params: lr=0.3649, n_est=204, depth=19
+  Gen   7/20 | Best Acc: 0.9260 | Avg Acc: 0.9171 | Params: lr=0.3649, n_est=204, depth=19
+  Gen   8/20 | Best Acc: 0.9260 | Avg Acc: 0.9151 | Params: lr=0.3649, n_est=204, depth=19
+  Gen   9/20 | Best Acc: 0.9260 | Avg Acc: 0.9162 | Params: lr=0.3649, n_est=204, depth=19
+  Gen  10/20 | Best Acc: 0.9260 | Avg Acc: 0.9149 | Params: lr=0.3649, n_est=204, depth=19
+  Gen  11/20 | Best Acc: 0.9260 | Avg Acc: 0.9157 | Params: lr=0.3649, n_est=204, depth=19
+  Gen  12/20 | Best Acc: 0.9260 | Avg Acc: 0.9162 | Params: lr=0.3649, n_est=204, depth=19
+  Gen  13/20 | Best Acc: 0.9270 | Avg Acc: 0.9179 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  14/20 | Best Acc: 0.9270 | Avg Acc: 0.9151 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  15/20 | Best Acc: 0.9270 | Avg Acc: 0.9140 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  16/20 | Best Acc: 0.9270 | Avg Acc: 0.9166 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  17/20 | Best Acc: 0.9270 | Avg Acc: 0.9154 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  18/20 | Best Acc: 0.9270 | Avg Acc: 0.9174 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  19/20 | Best Acc: 0.9270 | Avg Acc: 0.9172 | Params: lr=0.2522, n_est=169, depth=9
+  Gen  20/20 | Best Acc: 0.9270 | Avg Acc: 0.9199 | Params: lr=0.2522, n_est=169, depth=9
+
+============================================================
+  OPTIMIZATION COMPLETE — BEST HYPERPARAMETERS FOUND
+============================================================
+  learning_rate          : 0.25225
+  n_estimators           : 169
+  max_depth              : 9
+  min_samples_split      : 5
+  subsample              : 0.8351
+
+  Best CV Accuracy    : 92.7000 %
+
+============================================================
+  BASELINE vs GA-OPTIMIZED MODEL
+============================================================
+  Default Model Accuracy  : 88.2000 %
+  GA-Optimized Accuracy   : 92.7000 %
+  Improvement             : +4.5000 %
